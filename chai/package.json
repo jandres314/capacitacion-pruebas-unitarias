@@ -1,0 +1,17 @@
+{
+  "name": "chai-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-fs": "^2.0.0",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^8.4.0"
+  }
+}
