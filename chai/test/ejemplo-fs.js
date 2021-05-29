@@ -7,28 +7,28 @@ describe('set-pruebas-plugin-fs', () => {
     it(`dado una ruta en filesystem
     cuando se tiene un directorio
     entonces la validación isDirectory debe arrojar un resultado exitoso`, () => {
-        const path = 'D:/universidad/04-transaccionales';
+        const path = './archivos';
         chai.assert.isDirectory(path);
     });
 
     it(`dado una ruta en filesystem
     cuando se tiene un directorio con archivos
     entonces la validación notIsEmptyDirectory debe arrojar un resultado exitoso`, () => {
-        const path = 'D:/universidad/04-transaccionales';
+        const path = './archivos';
         chai.assert.notIsEmptyDirectory(path);
     });
 
     it(`dado una ruta en filesystem
     cuando se tiene un archivo con contenido
     entonces la validación notIsEmptyFile debe arrojar un resultado exitoso`, () => {
-        const path = 'D:/universidad/04-transaccionales/archivo-json.json';
+        const path = './archivos/archivo-json.json';
         chai.assert.notIsEmptyFile(path);
     });
 
     it(`dado una ruta en filesystem
     cuando se tiene un archivo con un json
     entonces la validación jsonFile debe arrojar un resultado exitoso`, () => {
-        const path = 'D:/universidad/04-transaccionales/archivo-json2.json';
+        const path = './archivos/archivo-json2.json';
         chai.assert.jsonFile(path);
     });
 
@@ -46,8 +46,8 @@ describe('set-pruebas-plugin-fs', () => {
               "nombre"
             ]
           };
-        const path = 'D:/universidad/04-transaccionales/archivo-json2.json';
-        chai.assert.jsonSchemaFile(path, esquema);
+        const path = './archivos/archivo-json2.json';
+        chai.assert.jsonSchemaFile(path, esquema, 'descripción de error');
     });
 
 });
